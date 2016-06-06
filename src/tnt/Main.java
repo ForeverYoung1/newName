@@ -9,7 +9,9 @@ public class Main {
         System.out.println(Arrays.asList(users));
         CompareUser compareUser = new CompareUserByAge();
 
-sort(users,compareUser);
+sort(users, (a, b)-> a.getAge() - b.getAge());
+        sort(users, (a,b)->a.getName().compareTo(b.getName()));
+        System.out.println(Arrays.asList(users));
         }
 
 private static void sort(User[] users, CompareUser comparableUser){
